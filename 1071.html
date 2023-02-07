@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const X = parseInt(prompt('Digite um valor inteiro'))
+        const Y = parseInt(prompt('Digite outro valor inteiro'))
+        let max = X
+        let min = Y
+        let soma = 0
+
+        if (Y > X) {
+            max = Y
+            min = X
+        }
+        if (max === min) {
+            console.log(0)
+        } else {
+            for(let i = min + 1; i < max; i++) {
+                if(i % 2 !== 0) soma += i
+            }
+            console.log(soma)
+        }
+        
+    </script>
+</body>
+</html>

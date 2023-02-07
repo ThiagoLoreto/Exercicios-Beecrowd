@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const [dia, numero1] = prompt('Digite o dia inicial:').split(' ').map(Number)
+        const [hora1, minuto1, segundo1] = prompt('Digite o horario inicial').split(' : ').map(Number)
+        const [dia2, numero2] = prompt('Digite o dia final:').split(' ').map(Number)
+        const [hora2, minuto2, segundo2] = prompt('Digite o horario final').split(' : ').map(Number)
+
+        let diaFinal = 0
+        let horaFinal = 0
+        let minutoFinal = 0
+        let segundoFinal = 0
+
+        if(segundo2 < segundo1) {
+            segundoFinal = 60 - (segundo1 - segundo2)
+            minutoFinal += -1
+        }
+        if(segundo2 >= segundo1) segundoFinal += segundo2 - segundo1
+        if(minuto2 < minuto1) {
+            minutoFinal += 60 - (minuto1 - minuto2)
+            horaFinal += -1
+        }
+        if(minuto2 >= minuto1) minutoFinal += minuto2 - minuto1
+        if(hora2 < hora1) {
+            horaFinal += 24 - (hora1 - hora2)
+            diaFinal += -1
+        }
+        if(hora2 >= hora1) horaFinal += hora2 - hora1
+        diaFinal += numero2 - numero1
+
+        console.log(diaFinal + ' dia(s)')
+        console.log(horaFinal + ' hora(s)')
+        console.log(minutoFinal + ' minuto(s)')
+        console.log(segundoFinal + ' segundo(s)')
+
+    </script>
+</body>
+</html>

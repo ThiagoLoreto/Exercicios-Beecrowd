@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let contadorPares = 0
+        let contadorPositivos = 0
+        let contadorImpar = 0
+        let contadorNegativo = 0
+        for(let i = 1; i <= 5; i++) {
+            let numero = Number(prompt('Digite um valor:'))
+            if(numero % 2 === 0) {
+                contadorPares++
+            } else {
+                contadorImpar++
+            }
+            if(numero > 0) contadorPositivos++
+            if(numero < 0) contadorNegativo++
+        }
+        console.log(contadorPares + ' valor(es) par(es)')
+        console.log(contadorImpar + ' valor(es) impar(es)')
+        console.log(contadorPositivos + ' valor(es) positivo(s)')
+        console.log(contadorNegativo + ' valor(es) negativo(s)')
+
+    </script>
+</body>
+</html>
